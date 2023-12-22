@@ -1,0 +1,21 @@
+---
+# code: language=ansible
+- name: Install wireguard dependency packages
+  ansible.builtin.apt:
+    name: "{{ wireguard_dependency_packages | default([]) }}"
+- name: Add wireguard group
+  ansible.builtin.group:
+    name: "{{ wireguard_user }}"
+    system: true
+- name: Add wireguard user
+  ansible.builtin.user:
+    name: "{{ wireguard_user }}"
+    group: "{{ wireguard_group }}"
+    system: true
+- name: Create install directory
+  ansible.builtin.file:
+    path: "{{ wireguard_home }}"
+    owner: "{{ wireguard_user }}"
+    group: "{{ wireguard_group }}"
+    state: directory
+    mode: "0755"

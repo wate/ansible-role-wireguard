@@ -1,0 +1,10 @@
+---
+# code: language=ansible
+# - name: Restart wireguard
+#   ansible.builtin.systemd:
+#     state: restarted
+#     name: wireguard
+# - name: Reload wireguard
+#   ansible.builtin.systemd:
+#     state: reloaded
+#     name: wireguard

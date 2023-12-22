@@ -1,0 +1,11 @@
+---
+wireguard_dependency_packages: []
+# wireguard_repo_owner: owner_name
+# wireguard_repo_name: repo_name
+
+# wireguard_apt_key_url: https://packages.repository.com/wireguard.gpg
+# wireguard_apt_key_dest: /usr/share/keyrings/wireguard.gpg
+
+wireguard_home: /opt/wireguard
+wireguard_user: wireguard
+wireguard_group: wireguard

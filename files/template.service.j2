@@ -1,0 +1,16 @@
+[Unit]
+Description=Sample
+# Requires=network.service
+# After=network.target
+
+[Service]
+Type=simple
+# EnvironmentFile=/etc/default/sample
+# Environment=VAR_NAME=VAR_VALUE
+WorkingDirectory={{ wireguard_home }}
+User={{ wireguard_user }}
+Group={{ wireguard_group }}
+ExecStart={{ wireguard_home }}/bin/execute
+
+[Install]
+WantedBy=multi-user.target
