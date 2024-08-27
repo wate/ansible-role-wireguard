@@ -7,7 +7,7 @@
     mode: "0644"
   notify: restart wireguard
 - name: Service wireguard is active and enabled on system startup
-  ansible.builtin.systemd:
+  ansible.builtin.systemd_service:
     name: wireguard
     state: started
     enabled: true
